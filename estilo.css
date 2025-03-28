@@ -1,4 +1,4 @@
- h1 {
+h1 {
             text-align: center;
         }
 
@@ -8,6 +8,9 @@
             position: relative;
             margin: 5vmin auto;
             text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .wrapper.throb {
@@ -15,10 +18,11 @@
             animation-delay: 0.8s;
         }
 
-        @-webkit-keyframes throb {
-            0% { -webkit-transform: scale(1); }
-            35% { -webkit-transform: scale(1.2); }
-            85% { -webkit-transform: scale(1); }
+        /* Animação de pulsação */
+        @keyframes throb {
+            0% { transform: scale(1); }
+            35% { transform: scale(1.2); }
+            85% { transform: scale(1); }
         }
 
         input[type="checkbox"] {
@@ -26,17 +30,19 @@
         }
 
         input[type="checkbox"] + label {
-            width: 30vmin; height: 30vmin;
+            width: 30vmin; 
+            height: 30vmin;
             line-height: 30vmin;
             display: inline-block;
             position: absolute;
             font-size: 30vmin;
             text-align: center;
             transition: all 1s ease;
+            border-radius: 50%;
         }
 
         label {
-            text-shadow: 3vmin 3vmin 10vmin rgba(0,0,0,0.5);
+            text-shadow: 3vmin 3vmin 10vmin rgba(0, 0, 0, 0.5);
         }
 
         label:hover {
@@ -45,7 +51,6 @@
         }
 
         #ck1 + label, #ck2 + label {
-            border-radius: 50%;
             top: 0;
         }
 
@@ -64,7 +69,8 @@
         }
 
         #ck1:checked + label, #ck2:checked + label {
-            width: 54vmin; height: 54vmin;
+            width: 54vmin;
+            height: 54vmin;
             border-radius: 50%;
             line-height: 54vmin;
         }
@@ -74,14 +80,17 @@
         }
 
         #ck3 + label {
-            bottom: 5vmin; left: 50%;
+            bottom: 5vmin;
+            left: 50%;
             margin: 0 -9vmin;
             background-color: white;
         }
 
         #ck3:checked + label {
-            width: 49.5vmin; height: 49.5vmin;
-            bottom: 17.28vmin; left: 29.16vmin;
+            width: 49.5vmin;
+            height: 49.5vmin;
+            bottom: 17.28vmin;
+            left: 29.16vmin;
             transform: rotate(45deg);
             line-height: 4.86vmin;
         }
@@ -90,8 +99,10 @@
             display: inline-block;
             text-align: left;
             position: absolute;
-            bottom: 0vmin; left: 0vmin;
+            bottom: 0vmin; 
+            left: 0vmin;
             margin-bottom: -3vmin;
             font-size: 6vmin;
             color: #999;
         }
+    
