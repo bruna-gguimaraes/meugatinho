@@ -1,4 +1,4 @@
-unction check() {
+function check() {
     // Selecionando os checkboxes e o elemento .wrapper
     const checkboxes = document.forms[0].elements;
     const wrapper = $('.wrapper');
